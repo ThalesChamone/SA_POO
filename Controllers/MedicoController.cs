@@ -65,7 +65,7 @@ namespace SA_OOP.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "Id", "Id", medico.EspecialidadeId);
+            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "Id", "NomeEspecialidade", medico.EspecialidadeId);
             return View(medico);
         }
 
@@ -82,7 +82,7 @@ namespace SA_OOP.Controllers
             {
                 return NotFound();
             }
-            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "Id", "Id", medico.EspecialidadeId);
+            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "Id", "NomeEspecialidade", medico.EspecialidadeId);
             return View(medico);
         }
 

@@ -14,6 +14,7 @@ namespace SA_OOP.Models
         public int Numero { get; set; }
         public string Bairro { get; set; }
         public string Complemento { get; set; }
+        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Informe um CPF válido")]
         public string CPF { get; set; }
         public string CEP { get; set; }
         [DataType(DataType.EmailAddress)]

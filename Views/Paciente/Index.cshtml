@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<SA_OOP.Models.Paciente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Pacientes Cadastrados";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastrar novo Paciente</a>
 </p>
 <table class="table">
     <thead>

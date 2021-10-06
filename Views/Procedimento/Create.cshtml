@@ -1,12 +1,10 @@
 ﻿@model SA_OOP.Models.Procedimento
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar Procedimentos";
 }
 
-<h1>Create</h1>
-
-<h4>Procedimento</h4>
+<h4>Cadastro de Procedimento</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
+                <input asp-for="Valor" id="valor" class="form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -50,4 +48,25 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
 }
+
+@*<script>
+    $(document).ready(() => {
+        $("#valor").validate({
+            //for debug only
+            debug: true,
+            rules: {
+                field: {
+                    required: true,
+                    pattern: /^(\d+|\d+,\d{1,2})$/
+                }
+            },
+            messages: {
+                field: {
+                    pattern: 'Please use the proper pattern'
+                }
+            }
+        });
+    })
+</script>*@

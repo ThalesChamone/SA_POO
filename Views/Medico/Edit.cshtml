@@ -40,12 +40,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
+                <input asp-for="CPF" placeholder="Ex: 123.456.789-90" class="form-control" />
                 <span asp-validation-for="CPF" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" class="form-control" />
+                <input asp-for="CEP" onblur="pesquisacep(this.value);" class="form-control" />
                 <span asp-validation-for="CEP" class="text-danger"></span>
             </div>
             <div class="form-group">

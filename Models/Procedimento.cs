@@ -16,7 +16,7 @@ namespace SA_OOP.Models
         public DateTime Data { get; set; }
         [Display(Name = "Nome Procedimento")]
         public string NomeProcedimento { get; set; }
-        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]      
         public double Valor { get; set; }
         public string Genero { get; set; }
         [DisplayName("Exceção")]

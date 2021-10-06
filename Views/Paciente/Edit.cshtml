@@ -40,12 +40,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
+                <input asp-for="CPF" placeholder="Ex: 123.456.789-90" class="form-control" />
                 <span asp-validation-for="CPF" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" class="form-control" />
+                <input asp-for="CEP"onblur="pesquisacep(this.value);" class="form-control" />
                 <span asp-validation-for="CEP" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -60,12 +60,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="ConvenioId" class="control-label"></label>
-                <select asp-for="ConvenioId" class="form-control" asp-items="ViewBag.ConvenioId"></select>
+                <select asp-for="ConvenioId" data-val="false" class="form-control" asp-items="ViewBag.ConvenioId">
+                    <option>Selecione..</option>
+                </select>
                 <span asp-validation-for="ConvenioId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ProcedimentoCodigo" class="control-label"></label>
-                <select asp-for="ProcedimentoCodigo" class="form-control" asp-items="ViewBag.ProcedimentoCodigo"></select>
+                <select asp-for="ProcedimentoCodigo" data-val="false" class="form-control" asp-items="ViewBag.ProcedimentoCodigo">
+                    <option>Selecione..</option>
+                </select>
                 <span asp-validation-for="ProcedimentoCodigo" class="text-danger"></span>
             </div>
             <div class="form-group">
