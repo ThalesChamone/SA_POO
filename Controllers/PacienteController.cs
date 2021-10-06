@@ -59,7 +59,7 @@ namespace SA_OOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CEP,Email,Telefone,ConvenioId,ProcedimentoCodigo")] Paciente paciente)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CPF,CEP,Email,Telefone,ConvenioId,ProcedimentoCodigo")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace SA_OOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CEP,Email,Telefone,ConvenioId,ProcedimentoCodigo")] Paciente paciente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CPF,CEP,Email,Telefone,ConvenioId,ProcedimentoCodigo")] Paciente paciente)
         {
             if (id != paciente.Id)
             {

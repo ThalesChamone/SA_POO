@@ -57,7 +57,7 @@ namespace SA_OOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CEP,Email,Telefone,EspecialidadeId")] Medico medico)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CPF,CEP,Email,Telefone,EspecialidadeId")] Medico medico)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace SA_OOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CEP,Email,Telefone,EspecialidadeId")] Medico medico)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Rua,Numero,Bairro,Complemento,CPF,CEP,Email,Telefone,EspecialidadeId")] Medico medico)
         {
             if (id != medico.Id)
             {
@@ -156,5 +156,6 @@ namespace SA_OOP.Controllers
         {
             return _context.Medico.Any(e => e.Id == id);
         }
+
     }
 }

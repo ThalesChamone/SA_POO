@@ -14,6 +14,7 @@ namespace SA_OOP.Models
         public int Numero { get; set; }
         public string Bairro { get; set; }
         public string Complemento { get; set; }
+        public string CPF { get; set; }
         public string CEP { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
@@ -29,7 +30,7 @@ namespace SA_OOP.Models
         {
         }
 
-        public Paciente(int id, string nome, string rua, int numero, string bairro, string complemento, string cEP, string email, string telefone)
+        public Paciente(int id, string nome, string rua, int numero, string bairro, string complemento, string cPF, string cEP, string email, string telefone)
         {
             Id = id;
             Nome = nome;
@@ -37,6 +38,7 @@ namespace SA_OOP.Models
             Numero = numero;
             Bairro = bairro;
             Complemento = complemento;
+            CPF = cPF;
             CEP = cEP;
             Email = email;
             Telefone = telefone;

@@ -75,6 +75,9 @@ namespace SA_OOP.Migrations
                     b.Property<string>("CEP")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("CPF")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Complemento")
                         .HasColumnType("longtext");
 
@@ -115,10 +118,13 @@ namespace SA_OOP.Migrations
                     b.Property<string>("CEP")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("CPF")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Complemento")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("ConvenioId")
+                    b.Property<int>("ConvenioId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -130,7 +136,7 @@ namespace SA_OOP.Migrations
                     b.Property<int>("Numero")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProcedimentoCodigo")
+                    b.Property<int>("ProcedimentoCodigo")
                         .HasColumnType("int");
 
                     b.Property<string>("Rua")
@@ -189,11 +195,15 @@ namespace SA_OOP.Migrations
                 {
                     b.HasOne("SA_OOP.Models.Convenio", "Convenio")
                         .WithMany()
-                        .HasForeignKey("ConvenioId");
+                        .HasForeignKey("ConvenioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("SA_OOP.Models.Procedimento", "Procedimento")
                         .WithMany()
-                        .HasForeignKey("ProcedimentoCodigo");
+                        .HasForeignKey("ProcedimentoCodigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Convenio");
 
