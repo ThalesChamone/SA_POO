@@ -16,7 +16,8 @@ namespace SA_OOP.Models
         public DateTime Data { get; set; }
         [Display(Name = "Nome Procedimento")]
         public string NomeProcedimento { get; set; }
-        [DisplayFormat(DataFormatString = "{0:F2}")]      
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Range(10,99999.99, ErrorMessage = "Valor procedimento deve estar entre {1} e {2}")]
         public double Valor { get; set; }
         public string Genero { get; set; }
         [DisplayName("Exceção")]

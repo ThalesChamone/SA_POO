@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<SA_OOP.Models.Procedimento>
-
 @{
     ViewData["Title"] = "Procedimentos cadastrados";
 }
@@ -9,51 +8,52 @@
 <p>
     <a asp-action="Create">Adicionar novo procedimento</a>
 </p>
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Data)
             </th>
-            <th>
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.NomeProcedimento)
             </th>
-            <th>
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.Valor)
             </th>
-            <th>
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.Genero)
             </th>
-            <th>
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.Excecao)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeProcedimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Excecao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeProcedimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Excecao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

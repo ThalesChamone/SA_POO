@@ -17,7 +17,7 @@ function meu_callback(conteudo) {
         //Atualiza os campos com os valores.
         document.getElementById('Rua').value = (conteudo.logradouro);
         document.getElementById('Numero').value = (conteudo.numero);
-        document.getElementById('Bairro').value = (conteudo.localidade);
+        document.getElementById('Bairro').value = (conteudo.bairro);
     } //end if.
     else {
         //CEP não Encontrado.
