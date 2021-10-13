@@ -51,7 +51,6 @@ namespace SA_OOP.Controllers
 
         // POST: Procedimento/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Codigo,Data,NomeProcedimento,Valor,Genero,Excecao")] Procedimento procedimento)
