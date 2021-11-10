@@ -10,7 +10,7 @@ namespace SA_OOP.Models
     {
         public int Id { get; set; }
         [Display(Name = "Especialidade Médica")]
-        [RegularExpression(@"^([a-zA-Z ]*?)*$", ErrorMessage = "Formato Inválido")]
+        [RegularExpression(@"^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$", ErrorMessage = "Nome inválido")]
         public string NomeEspecialidade { get; set; }
 
         public Especialidade()

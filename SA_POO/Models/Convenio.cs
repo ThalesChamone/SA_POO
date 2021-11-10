@@ -36,7 +36,7 @@ namespace SA_OOP.Models
 
         [Display(Name = "Nome Contato")]
         [Required]
-        [RegularExpression(@"^([a-zA-Z ]*?)\s+([a-zA-Z]*)$", ErrorMessage = "Nome Inválido")]
+        [RegularExpression(@"^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$", ErrorMessage = "Nome inválido")]
         public string NomeContato { get; set; }
 
 

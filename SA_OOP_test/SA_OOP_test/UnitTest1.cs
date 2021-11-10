@@ -68,7 +68,7 @@ namespace SeleniumTests
             driver.FindElement(By.LinkText("Cadastrar novo Paciente")).Click();
             driver.FindElement(By.Id("Nome")).Click();
             driver.FindElement(By.Id("Nome")).Clear();
-            driver.FindElement(By.Id("Nome")).SendKeys("Pedr#$o Augusto");
+            driver.FindElement(By.Id("Nome")).SendKeys("Pedro Augusto");
             driver.FindElement(By.Id("CEP")).Clear();
             driver.FindElement(By.Id("CEP")).SendKeys("31030430");
             driver.FindElement(By.Id("Numero")).Clear();

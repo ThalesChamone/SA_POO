@@ -12,11 +12,12 @@ namespace SA_OOP.Models
 
 
         [Required]
-        [RegularExpression(@"^([a-zA-Z ]*?)\s+([a-zA-Z]*)$", ErrorMessage = "Nome Inválido")]
+        [RegularExpression(@"^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$",ErrorMessage = "Nome inválido")]
         public string Nome { get; set; }
 
 
         [Required]
+        [RegularExpression(@"^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$", ErrorMessage = "Nome inválido")]
         public string Rua { get; set; }
 
 
@@ -25,23 +26,24 @@ namespace SA_OOP.Models
 
 
         [Required]
+        [RegularExpression(@"^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$", ErrorMessage = "Nome inválido")]
         public string Bairro { get; set; }
 
-
+        [RegularExpression(@"^[\w'\-,.][^_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$", ErrorMessage = "Formato Inválido")]
         public string Complemento { get; set; }
-        
+
         [Required]
-        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Informe um CPF válido")]
+        [RegularExpression(@"[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}")]
         public string CPF { get; set; }
         
 
-        [Required]
+        [Required]        
         public string CEP { get; set; }
 
 
         [DataType(DataType.EmailAddress)]
-        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail não tem formato valido")]
         [Required]
+        [RegularExpression(@"^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail não tem formato valido")]
         public string Email { get; set; }
 
 

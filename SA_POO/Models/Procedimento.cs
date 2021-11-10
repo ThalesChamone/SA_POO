@@ -34,7 +34,7 @@ namespace SA_OOP.Models
 
 
         [DisplayName("Exceção")]
-        [RegularExpression(@"^([a-zA-Z ]*?)*$")]
+        [RegularExpression(@"([\s\S]+?(?=\b[a-z][0-9][)]|$))")]
         public string Excecao { get; set; }
 
 
